@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="customer_copy">Copia para el Cliente</string>
+    <string name="merchant_copy">Copia para el Comercio</string>
+    <string name="sale">VENTA</string>
+    <string name="auth">VENTA</string>
+    <string name="denied">Denegadas</string>
+    <string name="confirmation_string_in_stl">Confirmación</string>
+    <string name="auth_label">Aut:</string>
+    <string name="refund">REEMBOLSO</string>
+    <string name="pre_auth">PRE-AUTORIZACION</string>
+    <string name="totals_query">CONSULTA DE TOTALES</string>
+    <string name="confirmations">Confirmaciones</string>
+
+    <string name="pre_author">PREAUTORIZACIÓN</string>
+    <string name="operation_list">Lista de operaciones</string>
+    <string name="authorization_label">Venta:</string>
+    <string name="denied_label">Negado</string>
+    <string name="pre_auth_label">Pre-Aut</string>
+    <string name="refund_label">Reembolsos</string>
+    <string name="confirmations_label">Confirmaciones</string>
+    <string name="from_date">De:</string>
+    <string name="to_date_label">A:</string>
+    <string name="customer_signature">FIRMA CLIENTE</string>
+    <string name="time">Hora:</string>
+    <string name="date">Fecha:</string>
+    <string name="order">Pedido:</string>
+    <string name="terminal">Terminal:</string>
+    <string name="merchant">COMERCIO:</string>
+    <string name="application_label">Aplicacion:</string>
+
+    <string name="tpv">TPV:</string>
+    <string name="original_order">Op. Original:</string>
+    <string name="reference_">Referencia:</string>
+    <string name="authorized">AUTORIZADA</string>
+    <string name="declined">DENEGADA</string>
+    <string name="ticket_closing_message">Pagos por</string>
+</resources>

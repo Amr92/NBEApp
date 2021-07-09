@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--border: 3px solid #73AD21;-->
+<html>
+<head>
+   <title>RedSys Receipt</title>
+   <style>
+         @font-face{
+         font-family: 'TicketingFont';
+         src: url('file:///android_asset/ticketing.ttf')
+         }
+         body {
+         font-family: TicketingFont;
+         }
+         div.parentDiv{
+         max-width: 500px;
+         color: #000;
+         margin: auto;
+         font-weight:normal;
+         font-size: 25px;
+         letter-spacing: 1px;
+         }
+         p.ticketType{
+         text-align: center;
+         font-weight: bold;
+         font-size: 30px;
+         }
+         span.transactionType{
+         font-weight:bold;
+         font-size:30px;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         }
+         p.transactionData{
+         font-weight:bold;
+         font-size:30px;
+         text-align: center;
+         letter-spacing: 2px;
+         }
+         div.ctlsLogo img{
+         width: 50px;
+         height: 50px;
+         }
+         div.redsysLogoNormal img{
+         width: 250px;
+         height: 70px;
+         }
+         div.redsysLogoBlack img{
+         width: 250px;
+         height: 70px;
+         }
+         img.yelloLogo {
+            width: 100px;
+         }
+         span {
+         margin-top: 5px;
+         display: inline-block;
+         }
+         th {
+         height: 50px;
+         }
+         table
+{
+    table-layout: fixed;
+    width: 100%;
+}
+
+      </style>
+</head>
+<body>
+<div class="parentDiv">
+   <div hidden class="logoDiv redsysLogoNormal" style="margin-top: 10px; text-align: center;">
+      <img alt="Redsys Logo" src="file:///android_asset/redsys_logo_black.png">
+   </div>
+   <div class="logoDiv redsysLogoBlack" id="redsysLogoBlack" style="margin-top: 10px; text-align: center;">
+      <img alt="Redsys Logo" id="ticket_logo" src="redsys_logo_black.png">
+   </div>
+   <p class="ticketType" id="customer_or_merchant_version"></p>
+   <p id="merchant_name">PRUEBAS REDSYS</p>
+   <p style="text-transform: uppercase; margin-top: -15px; display:flex; justify-content: space-between; align-items: center;">
+            <span>
+            <span id = "merchant_number_label">comercio :</span>
+            <span id="merchant_number">15452</span>
+            </span>
+      <span>
+            <span id="tpv_label">TPV :</span>
+            <span id="tpv_number" >456216</span>
+            </span>
+   </p>
+   <p style="text-transform: uppercase; margin-top: -15px; display:flex; justify-content: space-between; align-items: center;">
+            <span >
+            <span id="date_label">Date:</span>
+            <span id="transaction_date">21.8.20</span>
+            </span>
+      <span >
+            <span id="time_label">Time:</span>
+            <span id="transaction_time">08:16</span>
+            </span>
+   </p>
+   <p style="margin-top: -23px; display:flex;justify-content: space-between;align-items: center; text-transform: uppercase;">
+            <span >
+            <span id="ent_label">Ent:</span>
+            <span id="ent_number">2100</span>
+            </span>
+   </p>
+   <div id="totals_query">
+      <span id="ticket_label" style="display: block; text-align: center; font-weight: bold;">TOTALS QUERY</span>
+      <table style="text-align: center;">
+         <tr >
+            <th >Ops. in <span id = "currency"></span></th>
+            <th>Amount</th>
+            <th>N.Ops</th>
+         </tr>
+         <tr >
+            <td style="text-align: left;" id="authorization_label">Auth</td>
+            <td id="auth_amount"></td>
+            <td id="auth_num_operations"></td>
+         </tr>
+         <tr>
+            <td style="text-align: left;" id="pre_authorization_label">Pre-Auth</td>
+            <td id="pre_auth_amount"></td>
+            <td id="pre_auth_num_operations"></td>
+         </tr>
+          <tr>
+              <td style="text-align: left;" id="denied_label">Denied</td>
+              <td id="denied_amount"></td>
+              <td id="denied_num_operations"></td>
+          </tr>
+         <tr>
+            <td style="text-align: left;" id="refund_label">Refunds</td>
+            <td id="refunds_amount"></td>
+            <td id="refunds_num_operations"></td>
+         </tr>
+         <tr>
+            <td style="text-align: left;" id="confirmations_label">Confirmations</td>
+            <td id="confirmations_amount"></td>
+            <td id="confirmations_num_operations"></td>
+         </tr>
+         <tfoot>
+         <tr style="font-weight: bold;">
+            <td id="total" style="text-align: left;">Total</td>
+            <td id="total_amount"></td>
+            <td id="total_num_operations"></td>
+         </tr>
+         </tfoot>
+      </table>
+   </div>
+
+    <br>
+
+    <!--    Ticket Closing Message && Yello Logo-->
+
+<!--    <div style="align-items: center; justify-content: center; display: flex;">-->
+<!--        <span id="ticket_closing_message" style="margin-right: 10px; margin-bottom: 5px;"></span>-->
+<!--        <img id="yello_logo" class="yelloLogo" alt="Yello Logo" src="file:///android_asset/yello_logo.png">-->
+<!--    </div>-->
+
+    <!--    QR Code-->
+
+<!--    <div style="justify-content: center; display: flex;">-->
+<!--        <img id="qr_code_image" alt="QR Code" src="file:///android_asset/yello_qr_code.png">-->
+<!--    </div>-->
+
+</div>
+</body>
+</html>

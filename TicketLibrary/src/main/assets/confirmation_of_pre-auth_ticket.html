@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--border: 3px solid #73AD21;-->
+<html>
+<head>
+    <title>RedSys Receipt</title>
+    <style>
+            @font-face{
+                font-family: 'TicketingFont';
+                src: url('file:///android_asset/ticketing.ttf')
+            }
+            body {
+                font-family: TicketingFont;
+            }
+            div.parentDiv{
+                max-width: 500px;
+                color: #000;
+                margin: auto;
+                font-weight:normal;
+                font-size: 25px;
+                letter-spacing: 1px;
+            }
+            p.ticketType{
+                text-align: center;
+                font-weight: bold;
+                font-size: 30px;
+            }
+            span.transactionType{
+                font-weight:bold;
+                font-size:30px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            p.transactionData{
+                font-weight:bold;
+                font-size:30px;
+                text-align: center;
+                letter-spacing: 2px;
+            }
+            div.ctlsLogo img{
+                width: 100px;
+                height: 100px;
+            }
+            div.redsysLogoNormal img{
+                width: 250px;
+                height: 70px;
+            }
+            div.redsysLogoBlack img{
+                width: 250px;
+                height: 70px;
+            }
+            img.yelloLogo {
+                width: 100px;
+            }
+            span {
+                margin-top: 5px;
+                display: inline-block;
+            }
+
+    </style>
+</head>
+<body>
+<div class="parentDiv">
+
+<!--    CTLS Icon-->
+    <div class="logoDiv ctlsLogo" hidden id="ctls_logo" style="text-align: center;">
+        <img alt="CTLS Logo" src="file:///android_asset/ctls_logo.png">
+    </div>
+
+<!--    Normal Logo-->
+    <div hidden class="logoDiv redsysLogoNormal" style="margin-top: 10px; text-align: center;">
+        <img alt="Redsys Logo" src="file:///android_asset/redsys_logo.png">
+    </div>
+
+<!--    Black Logo-->
+    <div class="logoDiv redsysLogoBlack" id="redsysLogoBlack" style="margin-top: 5px; text-align: center;">
+        <img alt="Redsys Logo" id="ticket_logo" src="file:///android_asset/redsys_logo_black.png">
+    </div>
+
+<!--    Ticket Version-->
+    <p class="ticketType" id="customer_or_merchant_version"></p>
+
+<!--    Merchant Name-->
+    <p id="merchant_name"></p>
+
+<!--    Merchant Number && TPV-->
+    <p style="margin-top: -15px; display:flex; justify-content: space-between; align-items: center;">
+        <span>
+            <span id="merchant_label" style="text-transform: uppercase;"></span>
+            <span id="merchant_number"></span>
+        </span>
+
+        <span>
+            <span id="tpv_label"></span>
+            <span id="tpv"></span>
+        </span>
+    </p>
+
+    <p style="text-align: center">
+        <!--    Card Number-->
+        <span id="card_number" style="font-weight: 550;"></span>
+        <br>
+        <!--    Operation Type-->
+        <span class="transactionType" id="operation_type"></span>
+        <br>
+        <!--  Original Order-->
+        <span id="original_order_label"></span>
+        <span id="original_order"></span>
+    </p>
+
+<!--    Date && Time-->
+    <p style=" display:flex; justify-content: space-between; align-items: center;">
+        <span>
+            <span id="date_label"></span>
+            <span id="transaction_date"></span>
+        </span>
+
+        <span>
+            <span id="time_label"></span>
+            <span id="transaction_time"></span>
+        </span>
+    </p>
+
+<!--    Order-->
+    <p style="margin-top: -23px; display:flex; justify-content: space-between; align-items: center;">
+        <span>
+            <span id="order_label"></span>
+            <span id="order_number"></span>
+        </span>
+    </p>
+
+<!--    Amount-->
+    <p class="transactionData">
+        <span id="transaction_amount"></span>
+        <span id="currency"></span>
+    </p>
+
+<!--    Reference-->
+    <p style="text-align: center">
+        <span id="reference_label"></span>
+        <span id="reference"></span>
+    </p>
+
+    <!--    Ticket Closing Message && Yello Logo-->
+
+<!--    <div style="align-items: center; justify-content: center; display: flex;">-->
+<!--        <span id="ticket_closing_message" style="margin-right: 10px; margin-bottom: 5px;"></span>-->
+<!--        <img id="yello_logo" class="yelloLogo" alt="Yello Logo" src="file:///android_asset/yello_logo.png">-->
+<!--    </div>-->
+
+    <!--    QR Code-->
+
+<!--    <div style="justify-content: center; display: flex;">-->
+<!--        <img id="qr_code_image" alt="QR Code" src="file:///android_asset/yello_qr_code.png">-->
+<!--    </div>-->
+
+</div>
+</body>
+</html>

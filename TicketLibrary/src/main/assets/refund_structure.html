@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--border: 3px solid #73AD21;-->
+<html>
+<head>
+    <title>RedSys Receipt</title>
+    <style>
+         @font-face{
+         font-family: 'TicketingFont';
+         src: url('file:///android_asset/ticketing.ttf')
+         }
+         body {
+         font-family: TicketingFont;
+         }
+         div.parentDiv{
+         max-width: 500px;
+         color: #000;
+         margin: auto;
+         font-weight:normal;
+         font-size: 25px;
+         letter-spacing: 1px;
+         }
+         p.ticketType{
+         text-align: center;
+         font-weight: bold;
+         font-size: 30px;
+         }
+         span.transactionType{
+         font-weight:bold;
+         font-size:30px;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         }
+         p.transactionData{
+         font-weight:bold;
+         font-size:30px;
+         text-align: center;
+         letter-spacing: 2px;
+         }
+         div.ctlsLogo img{
+         width: 50px;
+         height: 50px;
+         }
+         div.redsysLogoNormal img{
+         width: 250px;
+         height: 70px;
+         }
+         div.redsysLogoBlack img{
+         width: 250px;
+         height: 70px;
+         }
+         img.yelloLogo {
+            width: 100px;
+         }
+         span {
+         margin-top: 5px;
+         display: inline-block;
+         }
+         th {
+         height: 50px;
+         }
+         table
+{
+    table-layout: fixed;
+    width: 100%;
+}
+
+
+    </style>
+</head>
+<body>
+<div class="parentDiv">
+    <div class="logoDiv redsysLogoNormal" hidden style="margin-top: 10px; text-align: center;">
+        <img alt="Redsys Logo" src="file:///android_asset/redsys_logo_black.png">
+    </div>
+    <div class="logoDiv redsysLogoBlack" id="redsysLogoBlack"
+         style="margin-top: 10px; text-align: center;">
+        <img alt="Redsys Logo" id="ticket_logo" src="redsys_logo_black.png">
+    </div>
+    <p class="ticketType" id="customer_or_merchant_version"></p>
+    <p id="merchant_name">PRUEBAS REDSYS</p>
+    <p style="margin-top: -15px; display:flex; justify-content: space-between; align-items: center;">
+        <span>
+            <span id="merchant_label">comercio :</span>
+            <span id="merchant_number">15452</span>
+        </span>
+        <span>
+            <span id="tpv_label">TPV :</span>
+            <span id="tpv_number">456216</span>
+        </span>
+    </p>
+    <p style="text-align: center;">
+        <span id="card_number">************2841</span>
+    </p>
+    <p>
+        <span id="ticket_label" style="display: block; text-align: center; font-weight: bold;">Refunds</span>
+    </p>
+    <p style="margin-top: -23px; display:flex;justify-content: space-between;align-items: center; text-transform: uppercase;">
+        <span style="text-align: left;">
+            <span id="authorization_label">Aut:</span>
+            <span id="authorization_number"></span>
+        </span>
+        <span style="display: block; text-align: right;">
+            <span id="op_label">Op:</span>
+            <span id="op">8234</span>
+        </span>
+    </p>
+    <p style="margin-top: -23px; display:flex;justify-content: space-between;align-items: center; text-transform: uppercase;">
+        <span style="text-align: left;">
+            <span id="date_label">Date:</span>
+            <span id="transaction_date">21.8.20</span>
+        </span>
+        <span style="display: block; text-align: right;">
+            <span id="time_label">Time:</span>
+            <span id="transaction_time">08:16</span>
+        </span>
+    </p>
+    <p style="text-align: center; font-weight: bold;">
+        <span id="currency_value">10</span>
+        <span id="currency">EUR</span>
+    </p>
+
+    <!--    Ticket Closing Message && Yello Logo-->
+
+<!--    <div style="align-items: center; justify-content: center; display: flex;">-->
+<!--        <span id="ticket_closing_message" style="margin-right: 10px; margin-bottom: 5px;"></span>-->
+<!--        <img id="yello_logo" class="yelloLogo" alt="Yello Logo" src="file:///android_asset/yello_logo.png">-->
+<!--    </div>-->
+
+    <!--    QR Code-->
+
+<!--    <div style="justify-content: center; display: flex;">-->
+<!--        <img id="qr_code_image" alt="QR Code" src="file:///android_asset/yello_qr_code.png">-->
+<!--    </div>-->
+
+</div>
+</body>
+</html>

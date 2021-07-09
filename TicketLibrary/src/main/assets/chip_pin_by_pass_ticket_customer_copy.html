@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--border: 3px solid #73AD21;-->
+<html>
+<head>
+    <title>RedSys Receipt</title>
+    <style>
+            @font-face{
+                font-family: 'TicketingFont';
+                src: url('file:///android_asset/ticketing.ttf')
+            }
+            body {
+                font-family: TicketingFont;
+            }
+            div.parentDiv{
+                max-width: 480px;
+                color: #000;
+                margin: auto;
+                font-weight:normal;
+                font-size: 25px;
+                letter-spacing: 1px;
+            }
+            p.ticketType{
+                text-align: center;
+                font-weight: bold;
+                font-size: 30px;
+            }
+            span.transactionType{
+                font-weight:bold;
+                font-size:30px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            p.transactionData{
+                font-weight:bold;
+                font-size:25px;
+                text-align: center;
+                letter-spacing: 2px;
+            }
+            div.ctlsLogo img{
+                width: 100px;
+                height: 100px;
+            }
+            div.redsysLogoNormal img{
+                width: 250px;
+                height: 70px;
+            }
+            div.redsysLogoBlack img{
+                width: 250px;
+                height: 70px;
+            }
+            img.yelloLogo {
+                width: 100px;
+            }
+            span {
+                margin-top: 5px;
+                display: inline-block;
+            }
+
+    </style>
+</head>
+<body>
+<div class="parentDiv">
+
+    <!--    <div class="logoDiv ctlsLogo" hidden id="ctls_logo" style="text-align: center;">-->
+    <!--        <img alt="CTLS Logo" src="file:///android_asset/ctls_logo.png">-->
+    <!--    </div>-->
+
+    <div hidden class="logoDiv redsysLogoNormal" style="margin-top: 10px; text-align: center;">
+        <img alt="Redsys Logo" src="file:///android_asset/redsys_logo.png">
+    </div>
+
+    <!--    <div class="logoDiv redsysLogoBlack" id="redsysLogoBlack" style="margin-top: 5px; text-align: center;">-->
+    <!--        <img alt="Redsys Logo" id="ticket_logo" src="file:///android_asset/redsys_logo_black.png">-->
+    <!--    </div>-->
+
+    <p class="ticketType" id="customer_or_merchant_version"></p>
+
+    <p id="merchant_name" style="text-align: center">NBE</p>
+    <p id="merchant_address" style="margin-top: -15px; text-align: center;justify-content: center;text-transform: uppercase;">address</p>
+
+    <p style="margin-top: -15px">
+        <span id="terminal_label" style="text-transform: uppercase; ">terminal id:</span>
+        <span id="terminal_id"></span>
+    </p>
+
+    <p style="margin-top: -15px">
+        <span id="merchant_label" style="text-transform: uppercase;">Merchant #:</span>
+        <span id="merchant_number"></span>
+    </p>
+
+    <span class="transactionType" id="operation_type">Sale</span>
+
+    <p id="card_number" style="margin-top: 10px;">********3456</p>
+
+    <p id="receipt_type" style="margin-top: -10px; text-transform: uppercase; font-weight:bold;">chip</p>
+
+    <!--    <p id="card_holder_name"></p>-->
+
+    <!--    <p style="margin-top: -15px;">-->
+    <!--        <span>Cad:</span>-->
+    <!--        <span id="card_expiration_date"></span>-->
+    <!--    </p>-->
+
+    <p style=" display:flex;justify-content: space-between;align-items: center;">
+                <span>
+                    <span id="batch_label" style="text-transform: uppercase;">BATCH: </span>
+                    <span id="batch_code"></span>
+                </span>
+
+        <span>
+                    <span id="receipt_label" style="text-transform: uppercase;">receipt #: </span>
+                    <span id="receipt_number"></span>
+                </span>
+    </p>
+
+    <p style="margin-top: -23px; display:flex;justify-content: space-between;align-items: center;">
+                <span>
+                    <span id="date_label" style="text-transform: uppercase;">date: </span>
+                    <span id="transaction_date"></span>
+                </span>
+        <span>
+                    <span id="time_label" style="text-transform: uppercase;">time: </span>
+                    <span id="transaction_time"></span>
+                </span>
+    </p>
+
+    <p style="margin-top: -23px; display:flex;justify-content: space-between;align-items: center;">
+                <span>
+                    <span id="RRN_label" style="text-transform: uppercase;">rrn: </span>
+                    <span id="RRN_number"></span>
+                </span>
+        <span>
+                    <span id="authorization_label" style="text-transform: uppercase;">auth: </span>
+                    <span id="authorization_number"></span>
+                </span>
+    </p>
+
+    <div id="app_section">
+                <span style="display: block; margin-top: 5px">
+                            <span id="application_label" style="text-transform: uppercase;">app name : </span>
+                            <span id="application_name"></span>
+                        </span>
+        <span style="display: block; margin-top: 5px">
+                            <span id="application_id"
+                                  style="text-transform: uppercase;">app id : </span>
+                            <span id="application_id_value"></span>
+                        </span>
+
+        <span style="display: block; margin-top: -5px;">
+            <span>
+                <span style="width: 140px">TVR:</span>
+                            <span id="terminal_verification_result"></span>
+
+                <span style="margin-left: 250px">TSI:</span>
+                            <span id="terminal_status_indicator"></span>
+            </span>
+
+                        </span>
+    </div>
+
+    <p class="transactionData" style="margin-top: 5px; display:flex;align-items: center;">
+        <span id="transaction_amount" style="text-transform: uppercase;">amount</span>
+        <span id="currency" style="margin-left: 120px"></span>
+    </p>
+
+    <p id="accepted_transaction" style="text-align: center; font-weight:bold;">عملية مقبولة</p>
+
+    <p style="margin-top: 20px">
+        <span id="please_sign_below" style="text-transform: uppercase; font-size:25px;">please sign below</span>
+    </p>
+
+    <hr style="border-top: dashed 1px;" />
+
+    <p style="margin-top: 20px">
+        <span id="card_holder_name" style="text-transform: uppercase; font-size:25px;">card holder name</span>
+    </p>
+
+    <p id="merchant_copy" style="margin-top: 20px; text-align: center; font-weight:bold; text-transform: uppercase;">customer copy</p>
+
+</div>
+</body>
+</html>

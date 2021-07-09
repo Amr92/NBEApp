@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="customer_copy">Customer Copy</string>
+    <string name="merchant_copy">Merchant Copy</string>
+    <string name="pre_auth">PRE-AUTHORIZATION</string>
+    <string name="sale">SALE</string>
+    <string name="refund">REFUND</string>
+    <string name="pre_author">PREAUTHORIZATION</string>
+    <string name="confirmations">Confirmations</string>
+
+    <string name="auth">SALE</string>
+    <string name="denied">Denied</string>
+    <string name="confirmation_string_in_stl">Confirmation</string>
+    <string name="auth_label">Auth:</string>
+    <string name="authorization_label">Sale</string>
+    <string name="pre_auth_label">Pre-Auth</string>
+    <string name="refund_label">Refunds</string>
+    <string name="confirmations_label">Confirmations</string>
+    <string name="denied_label">Denied</string>
+    <string name="op_label" translatable="false">Op:</string>
+    <string name="operation_list">Operation List</string>
+    <string name="merchant">Merchant:</string>
+    <string name="terminal">Terminal:</string>
+    <string name="order">Order:</string>
+    <string name="date">Date:</string>
+    <string name="time">Time:</string>
+    <string name="totals_query">TOTALS QUERY</string>
+    <string name="from_date">From:</string>
+    <string name="to_date_label">To:</string>
+    <string name="customer_signature">Customer Signature</string>
+    <string name="application_label">Application:</string>
+    <string name="tpv" translatable="false">TPV:</string>
+    <string name="ent" translatable="false">Ent:</string>
+
+    <string name="original_order">Op. Original:</string>
+    <string name="op" translatable="false">Op:</string>
+    <string name="reference_">Reference:</string>
+    <string name="authorized">AUTHORIZED</string>
+    <string name="declined">DECLINED</string>
+    <string name="ticket_closing_message">Payments powered by</string>
+
+</resources>
